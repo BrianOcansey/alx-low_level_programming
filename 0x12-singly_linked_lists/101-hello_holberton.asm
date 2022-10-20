@@ -1,17 +1,31 @@
-	global    main
+SECTION .data
 
-	extern    printf
+msg:	db "Hello, Holberton", 0
+
+fmt:	db "%s", 10, 0
+
+
+
+	SECTION .text
+
+	extern printf
+
+	global main
 
 main:
 
-	mov   edi, format
+	mov esi, msg
 
-	xor   eax, eax
+	mov edi, fmt
 
-	call  printf
+	mov eax, 0
 
-	mov 	eax, 0
+	call printf
+
+
+
+	mov eax, 0
 
 	ret
 
-format:	 db `Hello, Holberton\n`,0
+Footer
