@@ -20,38 +20,38 @@ list_t *add_node(list_t **head, const char *str)
 
 {
 
-    list_t *new;
+	list_t *new;
 
-    size_t nchar;
-
-
-
-    new = malloc(sizeof(list_t));
-
-    if (new == NULL)
-
-        return (NULL);
+	size_t nchar;
 
 
 
-    new->str = strdup(str);
+	new = malloc(sizeof(list_t));
+
+	if (new == NULL)
+
+		return (NULL);
 
 
 
-    for (nchar = 0; str[nchar]; nchar++)
-
-        ;
+	new->str = strdup(str);
 
 
 
-    new->len = nchar;
+	for (nchar = 0; str[nchar]; nchar++)
 
-    new->next = *head;
-
-    *head = new;
+		;
 
 
 
-    return (*head);
+	new->len = nchar;
+
+	new->next = *head;
+
+	*head = new;
+
+
+
+	return (*head);
 
 }

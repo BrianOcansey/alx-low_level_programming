@@ -2,7 +2,7 @@
 
 /**
 
- * print_list - prints all the elements  a list_t list.
+ * print_list - prints all the elements of a list_t list.
 
  * @h: singly linked list.
 
@@ -10,32 +10,36 @@
 
  */
 
+
+
 size_t print_list(const list_t *h)
 
 {
 
-size_t nelem;
+	size_t nelem;
 
-nelem = 0;
 
-while (h != NULL)
 
-{
+	nelem = 0;
 
-if (h->str == NULL)
+	while (h != NULL)
 
-printf("[%d] %s\n", 0, "(nil)");
+	{
 
-else
+		if (h->str == NULL)
 
-printf("[%d] %s\n", h->len, h->str);
+			printf("[%d] %s\n", 0, "(nil)");
 
-h = h->next;
+		else
 
-nelem++;
+			printf("[%d] %s\n", h->len, h->str);
 
-}
+		h = h->next;
 
-return (nelem);
+		nelem++;
+
+	}
+
+	return (nelem);
 
 }
