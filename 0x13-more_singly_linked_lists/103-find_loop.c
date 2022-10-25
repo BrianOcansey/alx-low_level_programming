@@ -19,8 +19,7 @@ while (hare)
 if (tortoise == hare)
 {
 tortoise = head;
-while
-(tortoise);
+while (tortoise != hare)
 {
 tortoise = tortoise->next;
 hare = hare->next;
